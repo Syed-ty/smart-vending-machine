@@ -1,0 +1,74 @@
+
+
+<div class="row mt-2 mb-3">
+
+    <div class="col-md-3">
+       <button class="btn btn-primary backstyle" (click)="BacktoCatalogue()">
+          Back
+       </button>
+    </div>
+    <div class="col-md-6"></div>
+    <div class="col-md-3">
+
+    </div>
+  </div>
+
+
+
+
+<div class="row mt-2">
+  <div class="text-center">
+    <p class="heading-style">
+      Checkoutpage Screen
+    </p>
+  </div>
+</div>
+
+
+
+
+<div class="row mt-4">
+  <div class="col-md-4" *ngFor="let item of items">
+    <div class="card-container">
+      <div class="card d-flex" >
+        <i class="fa fa-info-circle text-center mt-2" aria-hidden="true" (click)="showNutritionalData(item)"></i>
+          <div>
+
+              <span >
+             {{tooltipdata}}
+             </span>
+          </div>
+
+
+       <img class="card-image text-center" [src]="item.productimage">
+
+       <div class="card-content">
+         <h2 class="card-title">
+           {{item.productname}}
+          </h2>
+        <!-- <p class="card-description">
+          {{item.productinfo}}
+        </p> -->
+
+        <p class="card-price">
+          {{item.productcost | currency : "INR" }}
+        </p>
+
+        <div class="card-action">
+          <button class="add-to-cart-button" (click)="additemtoCart(item)">
+           Add to Cart
+          </button>
+
+
+          <div>
+          </div>
+        </div>
+       </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+

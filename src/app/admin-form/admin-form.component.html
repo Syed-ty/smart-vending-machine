@@ -1,0 +1,52 @@
+
+
+
+
+<form [formGroup]="AddProductForm" class="mt-3">
+  <div class="row mt-2">
+   <div class="col-md-3">
+
+   </div>
+   <div class="col-md-5 text-center">
+    <h1 class="mt-2">
+      ADD PRODUCT
+
+    </h1>
+     <div >
+       <label for=""> Product Name</label>
+       <div>
+         <input type="string" formControlName="productname">
+       </div>
+     </div>
+     <div>
+      <label for=""> Product Cost</label>
+      <div>
+        <input type="number" formControlName="productcost">
+      </div>
+    </div>
+    <div>
+      <label for=""> Product Info</label>
+      <div>
+        <input type="string" formControlName="productinfo">
+      </div>
+    </div>
+    <div>
+      <label for=""> Product Image</label>
+      <div>
+        <input type="string" formControlName="productimage">
+      </div>
+    </div>
+
+    <div class="mt-3">
+     <button class="btn btn-primary" [disabled]="AddProductForm.invalid" (click)="onsubmit()">
+        Add
+     </button>
+    </div>
+
+   </div>
+
+  </div>
+
+
+
+</form>
